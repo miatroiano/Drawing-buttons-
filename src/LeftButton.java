@@ -1,9 +1,12 @@
 import java.awt.Color;
+import java.util.Random;
+import java.util.random.*;
 
 
 public class LeftButton extends Button {
 	
-	Color randomColor = new Color((int)(Math.random() * 0x1000000));
+	Random color = new Random();
+	
 	public LeftButton(LocationHolder locationHolder) {
 		super(locationHolder);
 		setFillColorPressed(Color.cyan);
@@ -19,8 +22,11 @@ public class LeftButton extends Button {
 	}
 
 	public Color getLineColor() {
+		float r = color.nextFloat();
+		float g = color.nextFloat();
+		float b = color.nextFloat();
 		
-		return randomColor;
+		return new Color(r, g, b);
 	}
 	public int getlineThickness() {
 		return 2;

@@ -14,7 +14,7 @@ public class DownButton extends Button {
 	}
 
 	public int computeNextXLocation() {
-		return currentLocation.getLocationX() - 5;
+		return currentLocation.getLocationX() + 5 ;
 	}
 
 	public int computeNextYLocation() {
